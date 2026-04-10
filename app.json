@@ -28,20 +28,6 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      [
-        "@mj-studio/react-native-naver-map",
-        {
-          "client_id": "YOUR_CLIENT_ID_HERE"
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "extraMavenRepos": ["https://repository.map.naver.com/archive/maven"]
-          }
-        }
-      ],
       "expo-router",
       [
         "expo-splash-screen",

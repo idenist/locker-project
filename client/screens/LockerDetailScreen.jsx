@@ -3,15 +3,15 @@ import { ScrollView, View } from "react-native";
 import { Button, Card, DataTable, Divider, Text } from "react-native-paper";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
-import InfoRow from "../components/LockerDetailScreen/InfoRow";
-import PhoneValue from "../components/LockerDetailScreen/PhoneValue";
-import LockerMap from "../components/LockerDetailScreen/LockerMap";
 import ScrollToTopButton from "../components/common/ScrollToTopButton";
-import { ProcessedCrgExplnText, ProcessedAddCrgText, ProcessedMthdExpln } from "../components/LockerDetailScreen/ProcessedText"
+import InfoRow from "../components/LockerDetailScreen/InfoRow";
+import LockerMap from "../components/LockerDetailScreen/LockerMap";
+import PhoneValue from "../components/LockerDetailScreen/PhoneValue";
+import { ProcessedAddCrgText, ProcessedCrgExplnText, ProcessedMthdExpln } from "../components/LockerDetailScreen/ProcessedText";
 
 import styles from "../styles/lockerDetailStyles";
-import { formatTime, datetimeFormat, formatLockerSize } from "../utils/formatters";
-import { getTodaysDay, getTodayOperationTime } from "../utils/getDateTime";
+import { datetimeFormat, formatLockerSize, formatTime } from "../utils/formatters";
+import { getTodayOperationTime, getTodaysDay } from "../utils/getDateTime";
 
 export default function LockerDetailScreen({ route, navigation }) {
   const baseURL = process.env.EXPO_PUBLIC_BASE_URL;
@@ -157,7 +157,7 @@ export default function LockerDetailScreen({ route, navigation }) {
               />
               <InfoRow
                 label="크기별 잔여 현황"
-                value={`대형 ${locker.usePsbltyLrgszStlckCnt ?? 0}, 중형 ${locker.usePsbltyMdmszStlckCnt ?? 0 }, 소형 ${locker.usePsbltySmlszStlckCnt ?? 0}`}
+                value={`대형 ${locker.usePsbltyLrgszStlckCnt ?? 0} ║ 중형 ${locker.usePsbltyMdmszStlckCnt ?? 0 } ║ 소형 ${locker.usePsbltySmlszStlckCnt ?? 0}`}
               />
             </View>
 
