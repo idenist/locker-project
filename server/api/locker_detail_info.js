@@ -99,7 +99,7 @@ async function upsertLocker(connection, row) {
       cntrlMthSeNm,
       useMthdExpln,
       kpngLmtCmdtyExpln
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ON DUPLICATE KEY UPDATE
       totCrtrYmd = VALUES(totCrtrYmd),
       stdgCd = VALUES(stdgCd),

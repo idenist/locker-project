@@ -79,7 +79,7 @@ async function upsertLockerRealtimeUse(connection, row) {
       usePsbltyLrgszStlckCnt,
       usePsbltyMdmszStlckCnt,
       usePsbltySmlszStlckCnt
-    ) VALUES (?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?)
     ON DUPLICATE KEY UPDATE
       totDt = VALUES(totDt),
       usePsbltyLrgszStlckCnt = VALUES(usePsbltyLrgszStlckCnt),
